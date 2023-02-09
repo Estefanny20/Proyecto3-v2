@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rick and Morty</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <center> <img class="titulo" src="img\Rick-and-Morty.png" width="400" height="200"> </center> 
 
     <select id="species">
-        <option value="general">general</option>
+        <option value="general" disabled selected >species:</option>
         <option value="Human">Human</option>
         <option value="Alien">Alien</option>
         <option value="Humanoid">Humanoid</option>
         <option value="Mytholog">Mytholog</option>
 
     </select>
+
+    <select id="status">
+        <option value="general" disabled selected >status:</option>
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="unknown">unknown</option>
+    </select>
     
 
     <div id="contenedor"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="module" src="RickAndMorty.js"></script>
+    <script type="module" src="personaje.js"></script>
     <script type="module" src="principal.js"></script>
 </body>
 </html>
