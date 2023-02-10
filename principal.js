@@ -4,7 +4,7 @@ var data= RickAndMorty;
 
 $(document).ready(
     function () {
-        for (let i = 0; i < 53; i++) {
+        for (let i = 0; i < 200; i++) {
                 personajes(i);
                       
         }
@@ -16,7 +16,7 @@ $(document).ready(
             if (($("#species").val()=="general")||($("#species").val()==data.results[i].species)) {
                 personajes(i);
                 
-            };   
+            }   
             if (($("#status").val()=="general")||($("#status").val()==data.results[i].status)) {
                 personajes(i);
                 

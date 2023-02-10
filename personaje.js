@@ -3,7 +3,7 @@ import { RickAndMorty } from "./RickAndMorty.js";
 var data= RickAndMorty;
 
 var position =localStorage.getItem("position");
-alert(data.results[position].name);
+
 
 $(document).ready(
     function () {
@@ -21,29 +21,31 @@ function cartasper(i) {
 
     let img =$("<img></img>");
     img.attr("src",data.results[i].image);
-    img.addClass("imagenpersonaje");
+    img.addClass("imagenpersonajecarta");
     div.append(img);
-    $('#cartapersonaje').append(div);
+    
+    let divAux=$("<div></div>");
+    divAux.addClass("cartaAux");
 
     let nombre=$("<h4></h4>");
     nombre.append(data.results[i].name);
     nombre.addClass("nombrepersonaje");
-    div.append(nombre);
+    divAux.append(nombre);
 
     let status=$("<p></p>");
     status.append(data.results[i].status);
     status.addClass("status");
-    div.append(status);
+    divAux.append(status);
 
     let gender=$("<p></p>");
     gender.append(data.results[i].gender);
     gender.addClass("gender");
-    div.append(gender);
+    divAux.append(gender);
 
     let species=$("<p></p>");
     species.append(data.results[i].species);
     species.addClass("species");
-    div.append(species);
+    divAux.append(species);
 
     let episode=$("<p></p>");
     for (let index = 0; index < data.results[i].episode.length; index++) {
@@ -53,7 +55,11 @@ function cartasper(i) {
     }
     
     episode.addClass("episode");
-    div.append(episode);
+    divAux.append(episode);
+
+    div.append(divAux);
+
+    $('#cartapersonaje').append(div);
 }
 
 /*
